@@ -1,32 +1,95 @@
-# Prerequisites
-*.d
+# Visual Studio Code
+.vscode/
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# Build artifacts
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
 
-# Precompiled Headers
-*.gch
-*.pch
+# Rider
+.idea/
+*.iml
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# Visual Studio 2017+
+.vs/
+*.suo
+*.user
+*.userprefs
+*.dbmdl
 
-# Fortran module files
-*.mod
-*.smod
+# Package files
+*.nupkg
+*.snk
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+# NuGet
+packages/
+*.nuget.log
+!**/packages.config
+# Exclude the contents of the "packages" folder but not the folder itself
+# This is useful if you have a "packages" folder at the solution level
+**/packages/*
+!**/packages/build/
+!**/packages/lib/
 
-# Executables
-*.exe
-*.out
-*.app
+# Entity Framework Core migrations
+# Exclude the migrations snapshot file, as it's often re-generated
+# You might want to include the migration files themselves (*.cs)
+# but the snapshot file is usually derived from the code.
+# If you want to include migration .cs files, you would remove
+# the "**/Migrations/*.cs" line if it were present.
+# The default snapshot is usually named <ProjectName>ModelSnapshot.cs
+**/Migrations/*ModelSnapshot.cs
+# Optionally, if you generate other EF Core related files you don't want to track
+# efpt.config.json # If you use EF Core Power Tools and don't want to track its config
+
+# Miscellaneous
+*.log
+*.pfx
+*.vspscc
+*.vssscc
+*.bak
+*.resharper
+*.dotSettings
+*.db
+*.sdf
+*.tlog
+*.trx
+*.pidb
+*.opendb
+*.ldf
+*.mdf
+*.idb
+
+# WCF
+*.svc.cs
+
+# User-specific files
+*.user
+*.user.prefs
+*.userprefs
+
+# Test results
+TestResults/
+*.trx
+.teststore/
+
+# NPM (if you add any frontend assets later, e.g., for bundling)
+node_modules/
+npm-debug.log
+
+# Mac OS
+.DS_Store
+
+# Linux
+*.swp
+*~
+
+# SQL Server Express / SQLite files
+# Explicitly ignore common database files if they are generated in the project root
+# For SQL Server Express, the .mdf and .ldf files are typically outside the project,
+# but if you attach them or store them in the project, ignore them.
+# For SQLite, the .db file itself should usually be ignored as it's a generated artifact.
+*.mdf
+*.ldf
+*.db
